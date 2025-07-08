@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- magnify -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.min.css"
+      integrity="sha512-wzhF4/lKJ2Nc8mKHNzoFP4JZsnTcBOUUBT+lWPcs07mz6lK3NpMH1NKCKDMarjaw8gcYnSBNjjllN4kVbKedbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- styles css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar page">
+      <div class="nav-center">
+        <!-- links -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">Products</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo -->
+        <img
+          src="images/logo-black.svg"
+          class="nav-logo"
+          width="300px"
+          alt="logo-white"
+        />
+        <!-- cart icon -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">A closer look at</h3>
+      </div>
+    </section>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close button-->
+        <button class="sidebar-close"><i class="fas fa-times"></i></button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link"
+              ><i class="fas fa-home fa-fw"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link"
+              ><i class="fas fa-spa fa-fw"></i>Products</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link"
+              ><i class="fas fa-book fa-fw"></i>About</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">Your Cart</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+        <!-- cart footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">Total: $12.99</h3>
+          <button class="cart-checkout btn">Check out</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- product info -->
+    <section class="single-product">
+      <div class="section-center single-product-center">
+        <a href="" class="magnify-anchor">
+          <img src="" class="single-product-img img zoom" alt="" />
+        </a>
+
+        <article class="single-product-info">
+          <div>
+            <h2 class="single-product-title"></h2>
+            <p class="single-product-company text-slanted"></p>
+            <p class="single-product-price"></p>
+            <div class="single-product-sku"></div>
+            <p class="single-product-desc"></p>
+            <button class="addToCartBtn btn">add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="page-loading">
+      <h2>Loading...</h2>
+    </div>
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- magnify plugin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"
+      integrity="sha512-YKxHqn7D0M5knQJO2xKHZpCfZ+/Ta7qpEHgADN+AkY2U2Y4JJtlCEHzKWV5ZE87vZR3ipdzNJ4U/sfjIaoHMfw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- page rendering script -->
+    <script type="module" src="./src/pages/product.js"></script>
+  </body>
+</html>
